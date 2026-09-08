@@ -1,131 +1,101 @@
-# 🐍 Snakes and Ladders (Desktop Edition)
+# 🐍 Snakes & Ladders (Desktop Edition)
 
-![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=flat&logo=windows)
-![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=flat&logo=python)
-![Latest Release](https://img.shields.io/github/v/release/YOUR_USERNAME/YOUR_REPO?label=Release&color=success)
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D6?style=for-the-badge&logo=windows)
+![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python)
+![Latest Release](https://img.shields.io/badge/Release-v2.0_Infinite-success?style=for-the-badge)
+![Dependencies](https://img.shields.io/badge/Dependencies-Zero%20External-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-A modern, standalone desktop implementation of the classic board game built in Python using **Tkinter**. Enjoy smooth animations, retro sound effects, custom game modes, toggleable power-ups, and persistent match statistics—packaged with **zero external runtime dependencies**.
-
----
-
-## 🎮 Quick Download (No Installation Required)
-
-If you just want to play the game on Windows without installing Python:
-
-1. Head over to the **[Latest Release](../../releases/latest)** page.
-2. Under **Assets**, download `SnakesAndLadders_v1.2.exe`.
-3. Double-click the file to launch and play immediately!
+A feature-rich, portable desktop implementation of the classic board game built with Python and **Tkinter**. Engineered with smooth hop animations, procedural board generation, customizable player avatars, tactical power-ups, retro audio synthesis, and match state saving—compiled into a clean, standalone Windows `.exe` with **zero external dependencies**.
 
 ---
 
-## ✨ Features
+## ⚡ Quick Start: Play Immediately (Windows)
 
-- **Classic 10×10 Grid:** Faithful serpentine numbering (squares 1 to 100).
-- **Flexible Match Modes:** 
-  - Solo vs. Computer opponent
-  - 2 to 4 Players local Pass-and-Play
-- **Fluid Hop Animations:** Tokens hop tile-by-tile across the board instead of teleporting.
-- **Graphic Assets:** Custom procedural canvas rendering for curving snakes and wooden ladders with cross rungs.
-- **Retro Native Audio:** Windows `winsound` sound effects for rolls, hops, ladders, snake bites, and fanfares (fails gracefully on other OS platforms).
-- **Mystery Power-Up Tiles (Toggleable):**
-  - ⭐ **Star Boost (+3):** Leap 3 tiles forward.
-  - 🛡️ **Snake Shield:** Absorbs and cancels the next snake bite.
-  - ❄️ **Freeze Trap:** Forces the player to skip their next turn.
-- **Exact Finish Rule:** Players must roll the exact number required to hit tile 100.
-- **Match Tracker & Stats:** Real-time event ticker and a persistent local leaderboard (`snakes_stats.json`) tracking wins and fastest finishes.
-- **Audio & Visual Polish:** Victory confetti animations and instant audio mute toggle.
+No Python installation required. Download the pre-built binary and launch:
+
+1. Open the **[Releases](../../releases/latest)** tab.
+2. Download the latest binary: `SnakesAndLadders_v2.0.exe`.
+3. Double-click the file to play.
 
 ---
 
-## 📊 Version Comparison
+## 🌟 Key Highlights
 
-| Feature | v1.0 | v1.1 | v1.2 (Latest) |
-|:---|:---:|:---:|:---:|
-| 10×10 Serpentine Grid | ✅ | ✅ | ✅ |
-| Solo vs. CPU Mode | ✅ | ✅ | ✅ |
-| 2–4 Local Pass-and-Play | ❌ | ✅ | ✅ |
-| Hop-by-Hop Animations | ❌ | ✅ | ✅ |
-| Illustrated Snakes & Ladders | ❌ | ✅ | ✅ |
-| Retro Sound Effects | ❌ | ✅ | ✅ |
-| Live Match Activity Log | ❌ | ✅ | ✅ |
-| Exact Finish at 100 | ❌ | ✅ | ✅ |
-| Power-Up Tiles (⭐, 🛡️, ❄️) | ❌ | ❌ | ✅ |
-| Persistent Leaderboard (`.json`) | ❌ | ❌ | ✅ |
-| Audio Mute Toggle | ❌ | ❌ | ✅ |
-| Victory Confetti Burst | ❌ | ❌ | ✅ |
+* **Multiple Board Modes:** Play the classic 10×10 marathon (100 tiles) or jump into a fast-paced 8×8 Blitz match (64 tiles).
+* **Procedural Map Generator:** Break away from standard boards. Generate endless, mathematically validated random maps where no traps overlap and all paths remain solvable.
+* **Tactical Power-Up System:** Turn classic luck into strategy with Shields, Star Boosts, Freeze Traps, and Free Rerolls.
+* **Custom Avatars:** Choose from 6 unique player symbols (🚀, 🤖, ⚡, 💎, 👑, 🦁) and signature token colors.
+* **Hop-by-Hop Animation Engine:** Pawns physically hop cell-by-cell across the board with customizable speed pacing (**Normal**, **Fast**, **Instant**).
+* **Game State Persistence (Save & Resume):** Match states auto-save to `snakes_save.json` so you can close the window and resume your game at any time.
+* **Hall of Fame & Statistics:** Built-in leaderboard tracks total matches, cumulative player wins, and record-fastest finishes in `snakes_stats.json`.
+* **Zero External Dependencies:** Runs purely on Python standard library modules (`tkinter`, `random`, `math`, `json`, `winsound`).
 
 ---
 
-## 🕹️ Game Rules & Power-Ups
+## 📊 Version Evolution & Feature Comparison
 
-- **Movement:** Take turns rolling a 6-sided die. First player to reach square **100** wins.
-- **Ladders:** Land on the base of a green ladder to climb immediately to the top rung.
-- **Snakes:** Land on a red snake's head to slide all the way down to its tail.
-- **Overshooting:** To reach 100, your roll must match the exact number of squares needed. If you overshoot, your turn is forfeited.
-- **Power-Ups (v1.2):**
-  - **Star (Tiles 25, 55, 80):** Grants 3 additional spaces.
-  - **Shield (Tiles 12, 45, 70):** Provides passive immunity against the next snake you land on.
-  - **Freeze (Tiles 33, 76):** Freezes your piece, causing you to forfeit your next roll.
+| Feature | v1.0 Baseline | v1.1 Deluxe | v1.2 Power-Ups | v2.0 Infinite (Latest) |
+| :--- | :---: | :---: | :---: | :---: |
+| **Board Grid** | 10×10 Classic | 10×10 Classic | 10×10 Classic | **10×10 & 8×8 Blitz** |
+| **Map Architecture** | Fixed Layout | Fixed Layout | Fixed Layout | **Fixed + Procedural** |
+| **Game Modes** | Solo vs. CPU | 1–4 Players / CPU | 1–4 Players / CPU | **1–4 Players / CPU** |
+| **Movement** | Instant Jump | Hop-by-Hop Hop | Hop-by-Hop Hop | **Paced Hop-by-Hop** |
+| **Board Rendering** | Line Arrows | Rendered Snakes/Rails | Rendered Snakes/Rails | **Dark-Themed HD Graphics** |
+| **Player Tokens** | Plain Discs | Numbered Discs | Status-Ring Discs | **Custom Token Avatars** |
+| **Audio Engine** | Silent | Native Windows SFX | SFX + Mute Switch | **SFX + Mute Switch** |
+| **Finish Mechanics** | Standard Landing | Exact Roll (100) | Exact Roll (100) | **Exact Roll (64 / 100)** |
+| **Match Activity Log** | ❌ | Live Event Ticker | Live Event Ticker | **Live Event Ticker** |
+| **Special Power-Ups** | ❌ | ❌ | ⭐, 🛡️, ❄️ | **⭐, 🛡️, ❄️, 🎲 (Reroll)** |
+| **Leaderboard / Stats** | ❌ | ❌ | Local JSON Records | **Local JSON Records** |
+| **Save / Resume State**| ❌ | ❌ | ❌ | **Auto/Manual JSON State**|
+| **Animation Speed** | Fixed | Fixed | Fixed | **Normal / Fast / Instant** |
+| **Hotkeys** | ❌ | ❌ | ❌ | **Spacebar / Enter Roll** |
+| **Victory VFX** | Dialog Box | Dialog Box | Confetti Burst | **Fireworks Engine** |
+
+---
+
+## 🕹️ Game Rules & Board Mechanics
+
+### The Core Objective
+Roll the die and maneuver your token from tile 1 to the final tile (tile 64 on Blitz, tile 100 on Classic). The first player to reach the final tile wins.
+
+* **Ladders:** Landing on the base of a green ladder propels your pawn directly to the top rung.
+* **Snakes:** Landing on a red serpent's head forces your pawn to slide down to the tip of its tail.
+* **Exact Finish Required:** You must roll the exact number remaining to reach the final tile. Any overshoot results in a forfeited turn.
+
+### Power-Ups & Modifier Tiles (Toggleable)
+When enabled, landing on marked squares activates unique effects:
+
+| Icon | Name | In-Game Effect |
+| :---: | :--- | :--- |
+| ⭐ | **Star Surge** | Grants an immediate bonus forward leap (+3 squares). |
+| 🛡️ | **Aegis Shield** | Grants passive immunity that absorbs and cancels the next snake bite you hit. |
+| ❄️ | **Cryo Trap** | Freezes your pawn in ice, forcing you to forfeit your next roll. |
+| 🎲 | **Lucky Tile** | Grants an immediate, free second dice roll during your turn. |
+
+---
+
+## ⌨️ Controls & Shortcuts
+
+* **Left Click / Spacebar / Enter:** Roll the dice when it is your turn.
+* **Speed Selector:** Toggle between **Normal** (cinematic), **Fast** (rapid play), and **Instant** (teleport hopping) at any point during a match.
+* **Save Button:** Commits the current game board, player positions, power-ups, and turns to `snakes_save.json`.
+* **Audio Checkbox:** Instantly toggles synthesized Windows sound effects on or off.
 
 ---
 
 ## 🛠️ Running from Source
 
 ### Prerequisites
-* [Python 3.8+](https://www.python.org/downloads/) installed and added to your system `PATH`.
-* Uses standard library modules only (`tkinter`, `random`, `math`, `json`, `winsound`).
+* **Python 3.8+** installed and added to your system `PATH`.
+* Compatible with Windows, macOS, and Linux (Audio features utilize Windows `winsound` and fail gracefully and silently on non-Windows platforms).
 
-### Instructions
+### Execution
 ```bash
-# 1. Clone this repository
+# Clone the repository
 git clone [https://github.com/YOUR_USERNAME/YOUR_REPO.git](https://github.com/YOUR_USERNAME/YOUR_REPO.git)
 cd YOUR_REPO
 
-# 2. Run the latest version
-python snakes_ladders_v1.2.py
-```
-
----
-
-## 📦 Building the Standalone Executable (.exe)
-
-You can compile any version of the script into a single binary using [PyInstaller](https://pyinstaller.org/):
-
-```bash
-# Install PyInstaller
-pip install pyinstaller
-
-# Compile standalone executable (no terminal popup)
-pyinstaller --noconsole --onefile --name "SnakesAndLadders_v1.2" snakes_ladders_v1.2.py
-
-```
-
-The completed executable will appear in the newly generated `dist/` folder:
-
-```text
-dist/SnakesAndLadders_v1.2.exe
-
-```
-
----
-
-## 📁 Repository Structure
-
-```text
-├── dist/                          # Generated standalone binaries (.exe)
-├── snakes_ladders.py              # Version 1.0 baseline
-├── snakes_ladders_v1.1.py         # Version 1.1 with multiplayer & hop animations
-├── snakes_ladders_v1.2.py         # Version 1.2 with power-ups & leaderboard (Current)
-├── snakes_stats.json              # Local match history & leaderboard (created on run)
-├── .gitignore                     # Ignores build artifacts and temp files
-├── LICENSE                        # MIT License
-└── README.md                      # Project documentation
-
-```
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
+# Launch the latest edition
+python snakes_ladders_v2.0.py
